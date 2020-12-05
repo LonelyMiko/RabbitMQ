@@ -14,8 +14,13 @@ public class serialization_method {
      */
     public serialization_method(Book obj, String name) {
         try {
+            //create 2 streams to serialize the object and save it to a file
             FileOutputStream fileOut = new FileOutputStream(name + ".ser");
+
+            //ObjectOutputStream writes primitive types into OutputStream as a byte stream.
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+
+            //writeObject(), starts the serialization mechanism and the object decomposes into bytes
             objectOut.writeObject(obj);
             objectOut.close();
             fileOut.close();

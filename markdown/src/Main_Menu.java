@@ -16,7 +16,7 @@ public class  Main_Menu {
         JButton link = new JButton("Link");
         JButton list = new JButton("List");
 
-
+        //Specify the position and size of a GUI component
         blockquotes.setBounds(300,100,150, 40);
         bold.setBounds(300,150,150,40);
         boldAndItalic.setBounds(300,200,150,40);
@@ -26,6 +26,7 @@ public class  Main_Menu {
         link.setBounds(300,400,150,40);
         list.setBounds(300,450,150,40);
 
+        //Implement an action listener to define what should be done when an user click on buttons
         blockquotes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,7 +38,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 boldActionListener boldActionListener = new boldActionListener();
-                //frame.dispose();
             }
         });
 
@@ -45,7 +45,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 boldAndItalicActionListener boldAndItalicActionListener = new boldAndItalicActionListener();
-                //frame.dispose();
             }
         });
 
@@ -53,7 +52,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 codeActionListener codeActionListener = new codeActionListener();
-                //frame.dispose();
             }
         });
 
@@ -61,7 +59,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 headingsActionListener headingsActionListener = new headingsActionListener();
-                //frame.dispose();
             }
         });
 
@@ -69,7 +66,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 italicActionListener italicActionListener = new italicActionListener();
-                //frame.dispose();
             }
         });
 
@@ -77,7 +73,6 @@ public class  Main_Menu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 linkActionListener linkActionListener = new linkActionListener();
-                //frame.dispose();
             }
         });
 
@@ -89,7 +84,7 @@ public class  Main_Menu {
             }
         });
 
-
+        // Put components in the frame
         frame.add(blockquotes);
         frame.add(bold);
         frame.add(boldAndItalic);
@@ -98,7 +93,6 @@ public class  Main_Menu {
         frame.add(italic);
         frame.add(link);
         frame.add(list);
-
 
         frame.setSize(800,600);//800 width and 600 height
         frame.setLayout(null);//using no layout managers

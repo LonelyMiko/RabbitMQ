@@ -1,5 +1,5 @@
 package com.serialization;
-import java.io.*;
+
 public class serialization_main {
     public static void main(String[] args) {
         Book oneHundredYearsOfSolitude = new Book("One Hundred Years of Solitude",417," Gabriel García Márquez","9780060919658","Novel");
@@ -17,7 +17,7 @@ public class serialization_main {
 
         System.out.println();
         System.out.println("\t********************************** Десериализация объекта ********************************** ");
-        deserialize_method oneHundredYearsOfSolitudeDerialization = new deserialize_method(oneHundredYearsOfSolitude, "oneHundredYearsOfSolitude");
-        deserialize_method animalFarmDerialization = new deserialize_method(animalFarm, "animalFarm");
+        deserialize_method oneHundredYearsOfSolitudeDeserialization = new deserialize_method(oneHundredYearsOfSolitude, "oneHundredYearsOfSolitude");
+        deserialize_method animalFarmDeserialization = new deserialize_method(animalFarm, "animalFarm");
     }
 }

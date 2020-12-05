@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.List;
 
 public class listActionListener {
     private JFrame list = new JFrame("List");
@@ -39,9 +38,8 @@ public class listActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame newFrame = new JFrame("List");
-                // converting the string to an int value //
-                int itemsCount = Integer.parseInt(items.getText());
-                ArrayList<String> list=new ArrayList<String>();
+                int itemsCount = Integer.parseInt(items.getText()); // converting the string to an int value
+                ArrayList<String> list = new ArrayList<String>();
                 JTextField items = new JTextField();
                 JLabel itemsLabel = new JLabel("Enter items");
                 JButton submit = new JButton("Submit");
