@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="produs1" class="com.example.spring.Hello">
+        <property name="nume" value="Jeleu" />
+    </bean>
+    <bean id="produs2" class="com.example.spring.Hello">
+        <property name="nume" value="Prajitura" />
+    </bean>
+    <bean id="produs3" class="com.example.spring.Hello">
+        <property name="nume" value="Ciocolata" />
+    </bean>
+    <bean id="produs4" class="com.example.spring.Hello">
+        <property name="nume" value="Salata" />
+    </bean>
+    <bean id="produs5" class="com.example.spring.Hello">
+        <property name="nume" value="Inghetata" />
+    </bean>
+
+</beans>
