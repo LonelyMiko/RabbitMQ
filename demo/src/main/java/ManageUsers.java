@@ -26,14 +26,12 @@ public class ManageUsers {
         Integer empID2 = ME.addEmployee("Daisy", "Das", "Subscriber");
         Integer empID3 = ME.addEmployee("John", "Paul", "Subscriber");
 
-        /* List down all the employees */
-        ME.listEmployees();
-
         /* Update employee's records */
-        ME.updateEmployee(empID1, "Subscriber");
+        ME.updateEmployee(empID1, "Admin");
 
         /* Delete an employee from the database */
         ME.deleteEmployee(empID2);
+
 
         /* List down new list of the employees */
         ME.listEmployees();
@@ -70,7 +68,7 @@ public class ManageUsers {
             for (Iterator iterator = employees.iterator(); iterator.hasNext();){
                 Users employee = (Users) iterator.next();
                 System.out.print("First Name: " + employee.getUsername_name());
-                System.out.print("  Last Name: " + employee.getUsername_pass());
+                System.out.print("  Pass: " + employee.getUsername_pass());
                 System.out.println("  Role: " + employee.getRole());
             }
             tx.commit();
@@ -82,7 +80,7 @@ public class ManageUsers {
         }
     }
 
-    /* Method to UPDATE salary for an employee */
+    /* Method to UPDATE role for an employee */
     public void updateEmployee(Integer EmployeeID, String role ){
         Session session = factory.openSession();
         Transaction tx = null;
