@@ -1,0 +1,29 @@
+
+D
+java:S37402"/Provide the parametrized type for this generic.(®¯ïD
+F
+java:S3740"/Provide the parametrized type for this generic.(¾ Ñõ
+E
+java:S3740"/Provide the parametrized type for this generic.(‘®¼D
+c
+java:S1192è"LDefine a constant instead of duplicating this literal "Information" 7 times.(Ú·Â”
+f
+java:S1192“"ODefine a constant instead of duplicating this literal "Invalid serial" 4 times.(ï¯™¶
+F
+java:S1066å"/Merge this if statement with the enclosing one.(âÌ€Ó
+P	java:S110'"<This class has 6 parents which is greater than 5 authorized.(Ä±›B
+Z
+java:S1155²">Use isEmpty() to check whether the collection is empty or not.(é€ìİıÿÿÿÿ
+Z
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(é€ìİıÿÿÿÿ
+H
+java:S1948/"-Make "crudMethods" transient or serializable.(è»¦Úøÿÿÿÿ
+G
+java:S19481"1Make "listDetailParts" transient or serializable.(üıª—
+d
+java:S3252J"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ
+n
+java:S3776…"RRefactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed.(¼ Òşüÿÿÿÿ
+=	java:S131‰""Add a default case to this switch.(¸ìù«üÿÿÿÿ
+I
+java:S1481I"3Remove this unused "selectedPieces" local variable.(Î¡‘ë

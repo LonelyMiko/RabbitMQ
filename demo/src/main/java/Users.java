@@ -4,6 +4,7 @@ public class Users {
     private String username_name;
     private String username_pass;
     private String role;
+    @Id
     private int id;
 
     public Users() {
@@ -39,7 +40,7 @@ public class Users {
         this.role = role;
     }
 
-    @Id
+
     public int getId() {
         return id;
     }

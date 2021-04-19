@@ -29,7 +29,7 @@ public class CheckStringOperators {
         if (hasDigitAfterParenthesis(token))
         {
             StringBuilder stringBuilder = new StringBuilder(token);
-            stringBuilder.insert(token.indexOf(')') + 1,'*'); // ERROR
+            stringBuilder.insert(token.indexOf(')') + 1,'*');
             return stringBuilder.toString();
         }
         return token;

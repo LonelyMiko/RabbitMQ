@@ -30,7 +30,7 @@ public class CheckStringBracket {
         }
         if (openBracketCount > closedBracketCount)
         {
-            for (int i = closedBracketCount; i <openBracketCount ; i++)
+            for (int i = closedBracketCount; i < openBracketCount ; i++)
             {
                 token = token + ')';
             }

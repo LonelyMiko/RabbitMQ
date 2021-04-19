@@ -65,8 +65,8 @@ public class ManageUsers {
         try {
             tx = session.beginTransaction();
             List employees = session.createQuery("FROM Users ").list();
-            for (Iterator iterator = employees.iterator(); iterator.hasNext();){
-                Users employee = (Users) iterator.next();
+            for (Object o : employees) {
+                Users employee = (Users) o;
                 System.out.print("First Name: " + employee.getUsername_name());
                 System.out.print("  Pass: " + employee.getUsername_pass());
                 System.out.println("  Role: " + employee.getRole());
@@ -101,19 +101,16 @@ public class ManageUsers {
 
     /* Method to DELETE an employee from the records */
     public void deleteEmployee(Integer EmployeeID){
-        Session session = factory.openSession();
-        Transaction tx = null;
 
-        try {
+        try (Session session = factory.openSession()) {
+            Transaction tx = null;
             tx = session.beginTransaction();
-            Users employee = (Users)session.get(Users.class, EmployeeID);
+            Users employee = (Users) session.get(Users.class, EmployeeID);
             session.delete(employee);
             tx.commit();
         } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (tx != null) tx.rollback();
             e.printStackTrace();
-        } finally {
-            session.close();
         }
     }
 }

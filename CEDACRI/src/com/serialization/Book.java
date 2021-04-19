@@ -7,7 +7,7 @@ public class Book implements java.io.Serializable {
     private String title;
     private String author;
     /*transient*/ private String ISBN;
-    private String genre;
+     String genre;
     private int pageNumber;
 
     /**

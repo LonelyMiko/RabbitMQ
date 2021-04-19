@@ -39,7 +39,6 @@ public class CheckStringWhiteSpace {
                 i--;
             }
         }
-            //
             return operatorCount == (numberCount - 1);
         }
 
