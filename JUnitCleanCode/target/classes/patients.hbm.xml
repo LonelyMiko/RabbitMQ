@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name = "com.cedacri.pojo.Patient" table = "Patient">
+
+    <meta attribute = "class-description">
+        This class contains the patient detail.
+    </meta>
+
+    <id name = "ID" type = "int" column = "ID">
+        <generator class="native"/>
+    </id>
+
+    <property name = "age" column = "age" type = "int"/>
+    <property name = "doctorID" column = "doctorID" type = "int"/>
+
+    <property name = "name" column = "patientName" type = "string"/>
+    <property name = "diagnosis" column = "diagnosis" type = "string"/>
+    <property name = "gender" column = "gender" type = "string"/>
+    <property name = "height" column = "height" type = "double"/>
+    <property name = "weight" column = "weight" type = "double"/>
+
+</class>
+</hibernate-mapping>

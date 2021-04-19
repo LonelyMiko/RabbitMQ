@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "md.cedacri.pojo.DetailParts" table = "detail_parts">
+
+        <meta attribute = "class-description">
+            This class contains the parts detail.
+        </meta>
+
+        <id name = "idPieceDetail" type = "int" column = "ID_PIECE_DETAIL">
+            <generator class="native"/>
+        </id>
+
+        <property name = "idPiece" column = "ID_PIECE" type = "int"/>
+        <property name = "idComputer" column = "ID_COMPUTER" type = "int"/>
+        <property name = "pieceDetail" column = "PIECE" type = "string"/>
+        <property name = "cost" column = "COST" type = "int"/>
+
+    </class>
+</hibernate-mapping>

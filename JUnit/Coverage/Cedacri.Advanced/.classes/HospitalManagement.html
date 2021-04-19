@@ -1,0 +1,177 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: HospitalManagement</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Cedacri.Advanced</a> ]
+</div>
+
+<h1>Coverage Summary for Class: HospitalManagement (Cedacri.Advanced)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">HospitalManagement</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (12/ 12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94,6%
+  </span>
+  <span class="absValue">
+    (35/ 37)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package Cedacri.Advanced;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.ArrayList;
+<i>4</i>&nbsp;import java.util.Map;
+<i>5</i>&nbsp;import java.util.concurrent.ConcurrentHashMap;
+<i>6</i>&nbsp;
+<b class="fc"><i>7</i>&nbsp;public class HospitalManagement {</b>
+<b class="fc"><i>8</i>&nbsp;    private Map&lt;String, Doctor&gt; doctorsList = new ConcurrentHashMap&lt;String, Doctor&gt;();</b>
+<b class="fc"><i>9</i>&nbsp;    private Map&lt;String, Patient&gt; patientsList = new ConcurrentHashMap&lt;String, Patient&gt;();</b>
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    public Map&lt;String, Doctor&gt; getDoctorsList() {
+<b class="fc"><i>12</i>&nbsp;        return doctorsList;</b>
+<i>13</i>&nbsp;    }
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    public Map&lt;String, Patient&gt; getPatientsList() {
+<b class="fc"><i>16</i>&nbsp;        return patientsList;</b>
+<i>17</i>&nbsp;    }
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    public void addDoctor(Doctor doctor)
+<i>20</i>&nbsp;    {
+<b class="fc"><i>21</i>&nbsp;        checkIfDoctorAlreadyExist(doctor);</b>
+<b class="fc"><i>22</i>&nbsp;        doctorsList.put(doctor.getName(),doctor);</b>
+<b class="fc"><i>23</i>&nbsp;    }</b>
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    public void addPatient(Patient patient)
+<i>26</i>&nbsp;    {
+<b class="fc"><i>27</i>&nbsp;        checkIfPatientAlreadyExist(patient);</b>
+<b class="fc"><i>28</i>&nbsp;        patientsList.put(patient.getName(),patient);</b>
+<b class="fc"><i>29</i>&nbsp;    }</b>
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    public void checkIfDoctorAlreadyExist(Doctor doctor)
+<i>32</i>&nbsp;    {
+<b class="fc"><i>33</i>&nbsp;        if (doctorsList.containsKey(doctor.getName()))</b>
+<i>34</i>&nbsp;        {
+<b class="fc"><i>35</i>&nbsp;            throw new RuntimeException(&quot;Doctor Already Exists&quot;);</b>
+<i>36</i>&nbsp;        }
+<b class="fc"><i>37</i>&nbsp;    }</b>
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    public void checkIfPatientAlreadyExist(Patient patient)
+<i>40</i>&nbsp;    {
+<b class="fc"><i>41</i>&nbsp;        if (patientsList.containsKey(patient.getName()))</b>
+<i>42</i>&nbsp;        {
+<b class="fc"><i>43</i>&nbsp;            throw new RuntimeException(&quot;Patient Already Exists&quot;);</b>
+<i>44</i>&nbsp;        }
+<b class="fc"><i>45</i>&nbsp;    }</b>
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;    public void removePatient(Patient patient)
+<i>48</i>&nbsp;    {
+<b class="fc"><i>49</i>&nbsp;        if (patientsList.containsKey(patient.getName()))</b>
+<i>50</i>&nbsp;        {
+<b class="fc"><i>51</i>&nbsp;            patientsList.remove(patient.getName());</b>
+<i>52</i>&nbsp;        }
+<i>53</i>&nbsp;        else
+<i>54</i>&nbsp;            {
+<b class="fc"><i>55</i>&nbsp;                throw new RuntimeException(&quot;Patient Does Not Exists&quot;);</b>
+<i>56</i>&nbsp;            }
+<b class="fc"><i>57</i>&nbsp;    }</b>
+<i>58</i>&nbsp;
+<i>59</i>&nbsp;    public void removeDoctor(Doctor doctor)
+<i>60</i>&nbsp;    {
+<b class="fc"><i>61</i>&nbsp;        if (doctorsList.containsKey(doctor.getName()))</b>
+<i>62</i>&nbsp;        {
+<b class="fc"><i>63</i>&nbsp;            doctorsList.remove(doctor.getName());</b>
+<i>64</i>&nbsp;        }
+<i>65</i>&nbsp;        else
+<i>66</i>&nbsp;            {
+<b class="fc"><i>67</i>&nbsp;                throw new RuntimeException(&quot;Doctor Does Not Exists&quot;);</b>
+<i>68</i>&nbsp;            }
+<b class="fc"><i>69</i>&nbsp;    }</b>
+<i>70</i>&nbsp;
+<i>71</i>&nbsp;    public void setDoctorID(Patient patient, int id)
+<i>72</i>&nbsp;    {
+<b class="fc"><i>73</i>&nbsp;        doctorsList.forEach((s, doctor) -&gt; {</b>
+<b class="fc"><i>74</i>&nbsp;            if (doctor.getID() == id) {</b>
+<b class="nc"><i>75</i>&nbsp;                patientsList.get(patient.getName()).setDoctorID(id);</b>
+<i>76</i>&nbsp;            }
+<i>77</i>&nbsp;            else
+<i>78</i>&nbsp;                {
+<b class="fc"><i>79</i>&nbsp;                    throw new RuntimeException(&quot;Invalid ID&quot;);</b>
+<i>80</i>&nbsp;                }
+<b class="nc"><i>81</i>&nbsp;        });</b>
+<b class="fc"><i>82</i>&nbsp;    }</b>
+<i>83</i>&nbsp;    public boolean checkIfDoctorIsRightForThePatient(DoctorTypes doctorType,String patientDiagnosis)
+<i>84</i>&nbsp;    {
+<b class="fc"><i>85</i>&nbsp;        TEST test = new TEST();</b>
+<b class="fc"><i>86</i>&nbsp;        boolean isRight = false;</b>
+<b class="fc"><i>87</i>&nbsp;        ArrayList&lt;String&gt; test_1 = test.map.get(doctorType.toString());</b>
+<b class="fc"><i>88</i>&nbsp;        if (test_1.contains(patientDiagnosis))</b>
+<i>89</i>&nbsp;        {
+<b class="fc"><i>90</i>&nbsp;            isRight = true;</b>
+<i>91</i>&nbsp;        }
+<b class="fc"><i>92</i>&nbsp;        return isRight;</b>
+<i>93</i>&nbsp;    }
+<i>94</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-03-09 17:16</div>
+</div>
+</body>
+</html>

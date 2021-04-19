@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Animals" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CEDACRI/src/com" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CEDACRI/src/com/regex" vcs="Git" />
+  </component>
+</project>

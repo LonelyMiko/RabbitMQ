@@ -1,0 +1,19 @@
+
+e
+5src/Java8/Multithreading/syпchroпized/Deadlock.java,2\6\2654e5a24c4d1347d270a121701111c0e32aeac0
+X
+(src/Java8/Multithreading/ThreadDemo.java,b\6\b6478f4c46981927bcc37ce6b42a6171584e5bca
+X
+(src/metanit/Multithreading/MyThread.java,9\9\99bfd864453c684504c73b338ea742b8420e0822
+R
+"src/Java8/Multithreading/Temp.java,2\6\26134e3b0ef1222736e3b392bc19c88d3e4742da
+W
+'src/Java8/Multithreading/NewThread.java,c\1\c1a85e61637b60ed5309397d0cd7b8aa2aef9206
+S
+#src/Java8/Multithreading/Synch.java,a\d\ad9bda123b91074d0ea74d5b01d9c00cbf0e4c13
+^
+.src/Java8/Multithreading/syпchroпized/B.java,1\2\12ceb67f7e64dc3ebaf1efa2493133b845abc99c
+^
+.src/Java8/Multithreading/syпchroпized/A.java,a\5\a50b9b9ebdfa2c3dc0cde6c43f583515d0c94714
+O
+src/Java8/Throw/MultiCatch.java,d\3\d319df5839e04747f19be4f054b9c4176690260f
