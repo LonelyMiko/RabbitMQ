@@ -19,9 +19,9 @@ public class Consumer {
             DeliverCallback deliverCallback = (consumerTag, delivery) ->{
                 String message = new String(delivery.getBody());
                 if (!message.trim().isEmpty()) {
-                    System.out.println("[" + todayDate + "] " + "[✔] New message from the Publisher: " + message);
+                    System.out.println("[" + todayDate + "] " + "[✔] New message from the DirectPublisher: " + message);
                 } else {
-                    System.out.println("[" + todayDate + "] " + "[✖] Cannot get message from the Publisher");
+                    System.out.println("[" + todayDate + "] " + "[✖] Cannot get message from the DirectPublisher");
                 }
             };
             channel.basicConsume("Queue-1",true,deliverCallback,consumerTag -> {});
