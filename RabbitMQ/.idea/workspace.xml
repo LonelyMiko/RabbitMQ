@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71130821-ea57-4b6b-8dfa-d0a8d172c48b" name="Changes" comment="Start learning RabbitMQ">
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/cedacrimaven.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/domain/domain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/email/email.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/repository/repository.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/service/service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CedacriMaven/web/web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ecd6000a7b6f4a2884412ff19f74193ed089648" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e79970dd52c6f0911bd80b42bdcbb91a84d1cc1b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/direct/DirectConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/direct/DirectPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/fanout/FanoutConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/fanout/FanoutPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test1/test1.iml" afterDir="false" />
+    <list default="true" id="71130821-ea57-4b6b-8dfa-d0a8d172c48b" name="Changes" comment="Add examples for Direct and Fanout Exchange">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/topic/TopicConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/exchange/topic/TopicPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Animals" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/cedacri/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/cedacri/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/cedacri/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/cedacri/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/cedacri/Consumer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,20 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
   </component>
-  <component name="RunManager" selected="Application.FanoutConsumer">
-    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.cedacri.Consumer" />
-      <module name="RabbitMQ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.cedacri.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TopicPublisher">
     <configuration name="DirectPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.cedacri.exchange.direct.DirectPublisher" />
       <module name="RabbitMQ" />
@@ -119,12 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Publisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.cedacri.Publisher" />
+    <configuration name="TopicConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.cedacri.exchange.topic.TopicConsumer" />
       <module name="RabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.cedacri.*" />
+          <option name="PATTERN" value="it.cedacri.exchange.topic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.cedacri.exchange.topic.TopicPublisher" />
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.cedacri.exchange.topic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TopicPublisher" />
+        <item itemvalue="Application.TopicConsumer" />
         <item itemvalue="Application.FanoutPublisher" />
         <item itemvalue="Application.FanoutConsumer" />
         <item itemvalue="Application.DirectPublisher" />
-        <item itemvalue="Application.Publisher" />
-        <item itemvalue="Application.Consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635487189615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add examples for Direct and Fanout Exchange">
+      <created>1635747829877</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635747829877</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +167,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start learning RabbitMQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start learning RabbitMQ" />
+    <MESSAGE value="Add examples for Direct and Fanout Exchange" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add examples for Direct and Fanout Exchange" />
   </component>
 </project>
